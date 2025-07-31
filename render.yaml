@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: socket-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    autoDeploy: true
+    envVars:
+      - key: JWT_SECRET
+        value: pFSejiUlNNOgzyXraUreIAl3BRu4oKpC
+      - key: PORT
+        value: 10000

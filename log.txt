@@ -1,0 +1,67 @@
+Server started - 23/7/2025, 12:38:20
+Server started - 30/7/2025, 10:58:47
+Server started - 30/7/2025, 11:05:21
+Server stopped - 30/7/2025, 11:05:31
+Server started - 30/7/2025, 11:15:20
+Server stopped - 30/7/2025, 11:20:35
+Server started - 30/7/2025, 11:21:34
+Server stopped - 30/7/2025, 11:21:58
+Server started - 30/7/2025, 11:21:59
+Server stopped - 30/7/2025, 11:23:38
+Server started - 30/7/2025, 11:23:48
+Server stopped - 30/7/2025, 11:30:48
+Server started - 30/7/2025, 11:33:10
+Server started - 30/7/2025, 11:33:39
+Server started - 30/7/2025, 11:34:13
+Server started - 30/7/2025, 11:35:10
+Server stopped - 30/7/2025, 11:35:52
+Server started - 30/7/2025, 11:40:14
+Server stopped - 30/7/2025, 11:40:24
+Server started - 30/7/2025, 11:42:31
+Server stopped - 30/7/2025, 11:42:38
+Server started - 30/7/2025, 11:43:16
+Server stopped - 30/7/2025, 11:44:51
+Server started - 30/7/2025, 11:44:54
+Server stopped - 30/7/2025, 11:46:03
+Server started - 30/7/2025, 11:46:11
+Connection error - 30/7/2025, 11:48:48 - Session ID unknown
+Connection error - 30/7/2025, 11:49:09 - Session ID unknown
+Server stopped - 30/7/2025, 11:49:58
+Server started - 30/7/2025, 11:50:27
+Connection error - 30/7/2025, 11:50:30 - Transport unknown
+Connection error - 30/7/2025, 11:50:31 - Transport unknown
+Connection error - 30/7/2025, 11:50:32 - Transport unknown
+Connection error - 30/7/2025, 11:50:35 - Transport unknown
+Connection error - 30/7/2025, 11:50:40 - Transport unknown
+Connection error - 30/7/2025, 11:50:45 - Transport unknown
+Connection error - 30/7/2025, 11:50:50 - Transport unknown
+Connection error - 30/7/2025, 11:50:55 - Transport unknown
+Connection error - 30/7/2025, 11:51:00 - Transport unknown
+Connection error - 30/7/2025, 11:51:05 - Transport unknown
+Connection error - 30/7/2025, 11:51:10 - Transport unknown
+Server stopped - 30/7/2025, 11:51:14
+Server started - 30/7/2025, 11:51:16
+Connection error - 30/7/2025, 11:51:19 - Transport unknown
+Connection error - 30/7/2025, 11:51:20 - Transport unknown
+Connection error - 30/7/2025, 11:51:22 - Transport unknown
+Connection error - 30/7/2025, 11:51:24 - Transport unknown
+Server stopped - 30/7/2025, 11:51:58
+Server started - 30/7/2025, 11:52:00
+Connection error - 30/7/2025, 11:52:03 - Transport unknown
+Connection error - 30/7/2025, 11:52:05 - Transport unknown
+Server stopped - 30/7/2025, 11:52:05
+Server started - 30/7/2025, 11:53:04
+Server stopped - 30/7/2025, 11:55:16
+Server started - 30/7/2025, 12:29:11
+Server stopped - 30/7/2025, 12:32:09
+Server started - 30/7/2025, 12:32:21
+Server stopped - 30/7/2025, 12:32:25
+Server started - 30/7/2025, 13:13:10
+Server stopped - 30/7/2025, 13:13:28
+Server started - 30/7/2025, 13:13:30
+Server started - 31/7/2025, 13:53:01
+Server stopped - 31/7/2025, 13:53:03
+Server started - 31/7/2025, 14:07:59
+Server stopped - 31/7/2025, 14:08:01
+Server started - 31/7/2025, 14:45:06
+Server stopped - 31/7/2025, 14:45:11
