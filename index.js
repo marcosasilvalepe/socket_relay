@@ -1,5 +1,7 @@
 "use strict";
 
+const VERSION = '1.0.0';
+
 require('dotenv').config()
 
 const { Server } = require('socket.io');
@@ -7,8 +9,6 @@ const jwt = require('jsonwebtoken');
 const http = require('http');
 const fs = require('node:fs/promises');
 const path = require('path');
-
-const VERSION = '1.0.0';
 
 // Configuration
 const PORT = process.env.PORT || 4250;
