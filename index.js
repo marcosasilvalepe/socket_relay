@@ -8,6 +8,7 @@ const http = require('http');
 const fs = require('node:fs/promises');
 const path = require('path');
 
+const VERSION = '1.0.0';
 
 // Configuration
 const PORT = process.env.PORT || 4250;
@@ -202,6 +203,19 @@ io.on('connection', socket => {
             }
         }
     });
+
+    socket.on('transmit weight', data => {
+        for (const socketId of data.transmitTo) {
+            try {
+
+                const targetSocket = io.sockets.sockets.get(parseInt(socketId));
+                if (!targetSocket || !targetSocket.connected) continue;
+
+                targetSocket.emit('weight update', data.weight);
+            }
+            catch(e) { console.log(`Error transmitting weight. ${e}`) }
+        }
+    });
     
     // Handle broadcast messages (to all connected users)
     socket.on('broadcast', (data, callback) => {
@@ -235,7 +249,6 @@ io.on('connection', socket => {
             }
             
             console.log(`Broadcast message from ${socket.username}`);
-            
         }
         catch (error) {
             console.error('Error handling broadcast:', error);
@@ -271,7 +284,6 @@ io.engine.on('connection_error', async (err) => {
 
     try { await fs.appendFile(path.join(__dirname, 'log.txt'), `Connection error - ${new Date().toLocaleString('es')} - ${err.message}\n`) }
     catch(e) { console.log(`Error appending to file ${e}`) }
-
 });
 
 // Start the server
@@ -280,10 +292,10 @@ server.listen(PORT, async () => {
     console.log(`WebSocket server running on port ${PORT}`);
     console.log(`Server accepts WebSocket connections only`);
     console.log(`JWT authentication required for all connections`);
+    console.log(`Server version: ${VERSION}`);
 
     try { await fs.appendFile(path.join(__dirname, 'log.txt'), `Server started - ${new Date().toLocaleString('es')}\n`) }
     catch(e) { console.log(`Error appending to file ${e}`) }
-
 });
 
 // Graceful shutdown
