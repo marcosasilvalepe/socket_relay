@@ -205,10 +205,15 @@ io.on('connection', socket => {
     });
 
     socket.on('transmit weight', data => {
+
+        console.log(data);
+        
         for (const socketId of data.transmitTo) {
             try {
 
                 const targetSocket = io.sockets.sockets.get(socketId);
+
+                console.log('Target Socket:', targetSocket ? targetSocket.username : 'Not found');
                 if (!targetSocket || !targetSocket.connected) continue;
 
                 targetSocket.emit('weight update', data.weight);
