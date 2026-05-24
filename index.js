@@ -145,7 +145,8 @@ io.on('connection', socket => {
                 requestId: requestId,
                 from: {
                     userId: socket.userId,
-                    username: socket.username
+                    username: socket.username,
+                    socketId: socket.id
                 },
                 message: data
             };
