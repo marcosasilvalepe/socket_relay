@@ -1,6 +1,6 @@
 "use strict";
 
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 
 require('dotenv').config()
 
@@ -208,7 +208,7 @@ io.on('connection', socket => {
         for (const socketId of data.transmitTo) {
             try {
 
-                const targetSocket = io.sockets.sockets.get(parseInt(socketId));
+                const targetSocket = io.sockets.sockets.get(socketId);
                 if (!targetSocket || !targetSocket.connected) continue;
 
                 targetSocket.emit('weight update', data.weight);
