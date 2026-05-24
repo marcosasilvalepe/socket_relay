@@ -206,20 +206,28 @@ io.on('connection', socket => {
     });
 
     socket.on('transmit weight', data => {
-
-        console.log(data);
-        
         for (const socketId of data.transmitTo) {
             try {
 
                 const targetSocket = io.sockets.sockets.get(socketId);
-
-                console.log('Target Socket:', targetSocket ? targetSocket.username : 'Not found');
                 if (!targetSocket || !targetSocket.connected) continue;
 
                 targetSocket.emit('weight update', data.weight);
             }
             catch(e) { console.log(`Error transmitting weight. ${e}`) }
+        }
+    });
+
+    socket.on('serial port closed', data => {
+        for (const socketId of data.transmitTo) {
+            try {
+
+                const targetSocket = io.sockets.sockets.get(socketId);
+                if (!targetSocket || !targetSocket.connected) continue;
+
+                targetSocket.emit('serial port closed');
+            }
+            catch(e) { console.log(`Error transmitting serial port closed. ${e}`) }
         }
     });
     
