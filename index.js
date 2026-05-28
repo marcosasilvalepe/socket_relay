@@ -218,6 +218,18 @@ io.on('connection', socket => {
         }
     });
 
+    socket.on('first weight transmit', data => {
+        try {
+
+            const targetSocket = io.sockets.sockets.get(data.to);
+            if (!targetSocket || !targetSocket.connected) return rejects('Socket not found');
+
+            targetSocket.emit('weight update', data.weight);
+
+        }
+        catch(e) { console.log(`Error sending first weight to user. ${e}`) }
+    });
+
     socket.on('serial port closed', data => {
         for (const socketId of data.transmitTo) {
             try {
